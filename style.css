@@ -38,6 +38,10 @@ body{
     line-height: 1.6;
 }
 
+section{
+    padding: 5em 2em;
+}
+
 img{
     display: block;
     max-width: 100%;
@@ -50,7 +54,7 @@ strong{
 /*Typography*/
 
 h1,h2,h3{
-    line-height: 1.1;
+    line-height: 1;
     margin: 0;
 }
 h1{font-size: var(--fs-h1)}
@@ -77,4 +81,30 @@ h3{font-size: var(--fs-h3)}
 .section__subtitle--about{
     background: var(--clr-accent);
     font-family: var(--ff-secondary);
+    margin-bottom: 1em;
 }
+/* header */
+nav{display: none;}
+
+/* Intro Section */
+.intro{
+    position:relative;
+}
+@media(min-width:600px){
+    .intro{
+        display: grid;
+        grid-column-gap: 1em;
+        width: min-content;
+        margin:0 auto;
+        grid-template-areas: 
+        "img title"
+        "img subtitle";
+        grid-auto-columns: min-content max-content;
+    }
+    .intro__img{
+        grid-area:img;
+        min-width: 250px;
+    }
+}
+
+    
